@@ -1,0 +1,146 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    height: 100vh;
+    padding: 15px;
+    margin: 0 auto;
+}
+@media (min-width:768px) {
+    .container{
+        width: 750px;
+    }
+}
+@media (min-width:992px) {
+    .container{
+        width: 970px;
+    }
+}
+@media (min-width:1200px) {
+    .container{
+        width: 1170px;
+    }
+}
+a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color:#fff;
+}
+li{
+    list-style: none;
+}
+body{
+    color:#fff;
+    font-family: sans-serif;
+    background-color: black;
+}
+/* start header*/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:15px;
+}
+header .logo{
+    width: 75px;
+    margin-left: 20px;
+}
+@media (max-width:767px) {
+    header{
+        justify-content: center;
+        flex-direction: column;
+    }
+    header .logo{
+        margin-bottom: 20px;
+    }
+    
+}
+header .nav{
+    display: flex;
+    align-items: center;
+}
+header .nav li{
+    position: relative;
+}
+header .nav li::before{
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: 0.2s;
+}
+header .nav li:hover::before {
+    width: 100%;
+}
+header .nav li a{
+    font-size: 18px;
+    padding: 10px;
+}
+/*end header */
+/* start main content page  */
+.content{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.content .intro{
+    width: 50%;
+    line-height: 1.7;
+}
+
+.content .intro h1{
+    font-size: 45px;
+    text-transform: uppercase;
+}
+.content .intro p{
+    font-size: 18px;
+}
+.content .intro a{
+    margin-top: 10px;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: silver;
+    color:black;
+    font-weight: bold;
+}
+.icon{
+    margin-top: 80px;
+    margin-left: 80px;
+    display:flex;
+    gap:25px;
+}
+@media (max-width:991px) {
+    .content{
+        flex-direction:column;
+    }
+    .content .intro{
+        text-align: center;
+        width:100%;
+    }
+    .icon{
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-left: 0;
+    }
+}
+.icon img{
+    max-width: 70px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.icon img:hover{
+    transform: scale(1.1);
+}
+/* end main content page  */
+/*start style of main phone  */
+.content img{
+    width: 220px;
+}
+/*end style of main phone  */
+
